@@ -1,0 +1,457 @@
+/* =========================
+   Base Reset
+========================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #ffffff;
+    color: #1f2937;
+    line-height: 1.6;
+}
+
+/* =========================
+   Navigation Bar
+========================= */
+nav {
+    background: linear-gradient(135deg, #1e40af, #2563eb);
+    padding: 18px 48px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 10px 30px rgba(37, 99, 235, 0.35);
+}
+
+nav a {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 600;
+    margin-left: 22px;
+    transition: opacity 0.3s ease, transform 0.2s ease;
+}
+
+nav a:hover {
+    opacity: 0.9;
+    transform: translateY(-1px);
+}
+
+/* =========================
+   Hero Section
+========================= */
+/* =========================
+   Hero Section – Premium
+========================= */
+.hero {
+    position: relative;
+    padding: 110px 20px 120px;
+    background: linear-gradient(135deg, #1e3a8a, #2563eb);
+    color: white;
+    overflow: hidden;
+}
+
+/* Soft background glow */
+.hero::before {
+    content: "";
+    position: absolute;
+    width: 500px;
+    height: 500px;
+    background: radial-gradient(circle, rgba(255,255,255,0.18), transparent 70%);
+    top: -150px;
+    left: 50%;
+    transform: translateX(-50%);
+    filter: blur(40px);
+}
+
+.hero-content {
+    position: relative;
+    max-width: 720px;
+    margin: 0 auto;
+    text-align: center;
+    z-index: 1;
+}
+
+/* Profile Image */
+.hero img {
+    width: 180px;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 6px solid rgba(255, 255, 255, 0.85);
+    margin-bottom: 28px;
+    box-shadow:
+        0 20px 40px rgba(0, 0, 0, 0.25),
+        0 0 0 12px rgba(255, 255, 255, 0.08);
+    animation: floatIn 0.9s ease forwards;
+}
+
+/* Text */
+.hero h1 {
+    font-size: 42px;
+    font-weight: 800;
+    letter-spacing: -0.5px;
+}
+
+.hero h3 {
+    margin-top: 14px;
+    font-size: 19px;
+    font-weight: 400;
+    opacity: 0.95;
+}
+
+/* Social Buttons */
+.social-links {
+    margin-top: 36px;
+}
+
+.social-links a {
+    display: inline-block;
+    margin: 0 14px;
+    padding: 12px 26px;
+    border-radius: 999px;
+    background: rgba(255, 255, 255, 0.18);
+    color: #ffffff;
+    font-weight: 600;
+    text-decoration: none;
+    backdrop-filter: blur(10px);
+    transition: transform 0.25s ease, background 0.25s ease;
+}
+
+.social-links a:hover {
+    background: rgba(255, 255, 255, 0.32);
+    transform: translateY(-3px);
+}
+
+/* Animation */
+@keyframes floatIn {
+    from {
+        opacity: 0;
+        transform: translateY(18px) scale(0.96);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .hero {
+        padding: 90px 20px 100px;
+    }
+
+    .hero h1 {
+        font-size: 32px;
+    }
+
+    .hero h3 {
+        font-size: 17px;
+    }
+}
+
+/* Social links */
+.social-links {
+    margin-top: 28px;
+}
+
+.social-links a {
+    display: inline-block;
+    margin: 0 14px;
+    padding: 10px 22px;
+    border-radius: 30px;
+    background: rgba(255, 255, 255, 0.18);
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 600;
+    backdrop-filter: blur(6px);
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.social-links a:hover {
+    background: rgba(255, 255, 255, 0.3);
+    transform: translateY(-2px);
+}
+
+/* =========================
+   Main Container
+========================= */
+.container {
+    max-width: 1150px;
+    margin: 70px auto;
+    padding: 0 24px;
+}
+
+/* =========================
+   Card Grid
+========================= */
+.card-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    max-width: 1200px;
+    margin: 0 auto;
+    margin-top: 50px;
+}
+
+/* =========================
+   Floating Cards
+========================= */
+.card {
+    background: #ffffff;
+    padding: 34px;
+    border-radius: 22px;
+    box-shadow:
+        0 20px 45px rgba(0, 0, 0, 0.08),
+        0 25px 60px rgba(37, 99, 235, 0.12);
+    transition: transform 0.35s ease, box-shadow 0.35s ease;
+}
+
+.card:hover {
+    transform: translateY(-12px);
+    box-shadow:
+        0 35px 70px rgba(0, 0, 0, 0.12),
+        0 45px 90px rgba(37, 99, 235, 0.18);
+}
+
+.card h2 {
+    color: #1e3a8a;
+    margin-bottom: 22px;
+    font-size: 24px;
+    align-items: center;
+}
+
+/* =========================
+   Skills
+========================= */
+.skills .skill {
+    background: #f1f5f9;
+    padding: 12px 18px;
+    border-radius: 12px;
+    margin-bottom: 14px;
+    font-weight: 500;
+}
+
+/* =========================
+   Projects
+========================= */
+.project {
+    margin-bottom: 28px;
+}
+
+.project img {
+    width: 100%;
+    height: 50%;
+    border-radius: 14px;
+    margin-bottom: 14px;
+}
+
+.project h3 {
+    color: #1e3a8a;
+    margin-bottom: 8px;
+}
+
+.project p {
+    color: #475569;
+    font-size: 15px;
+}
+
+.project a {
+    display: inline-block;
+    margin-top: 10px;
+    color: #2563eb;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.project a:hover {
+    text-decoration: underline;
+}
+
+/* =========================
+   Work Experience
+========================= */
+.experience-list {
+    display: flex;
+    flex-direction: column;
+    gap: 22px;
+}
+
+.experience-item {
+    padding-left: 18px;
+    border-left: 4px solid #2563eb;
+}
+
+.experience-item h3 {
+    margin-bottom: 6px;
+    color: #1e3a8a;
+    font-size: 18px;
+}
+
+.experience-item p {
+    color: #475569;
+    font-size: 15px;
+}
+
+
+/* =========================
+   Footer
+========================= */
+footer {
+    margin-top: 90px;
+    padding: 30px;
+    background: #f1f5f9;
+    text-align: center;
+    color: #475569;
+    font-size: 14px;
+}
+
+/* =========================
+   Responsive Design
+========================= */
+@media (max-width: 768px) {
+    nav {
+        padding: 16px 24px;
+    }
+
+    .hero {
+        padding: 70px 20px;
+        border-radius: 0 0 40px 40px;
+    }
+
+    .hero h1 {
+        font-size: 30px;
+    }
+}
+
+form {
+    max-width: 500px;
+    margin: 0 auto 50px auto;
+    background-color: #ffffff; /* White form */
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+/* Input and textarea styles */
+input[type="text"],
+input[type="email"],
+textarea {
+    padding: 12px 15px;
+    border: 1px solid #cbd5e1; /* light gray border */
+    border-radius: 8px;
+    font-size: 16px;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+textarea:focus {
+    border-color: #1e3a8a; /* Dark blue on focus */
+    box-shadow: 0 0 5px rgba(30, 58, 138, 0.3);
+    outline: none;
+}
+
+/* Textarea height */
+textarea {
+    resize: vertical;
+    min-height: 120px;
+}
+
+/* Button styles */
+button {
+    padding: 12px;
+    background-color: #1e3a8a; /* Dark blue */
+    color: #ffffff;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+button:hover {
+    background-color: #3b82f6; /* lighter blue on hover */
+    transform: translateY(-2px);
+}
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+    form {
+        margin: 20px;
+        padding: 20px;
+    }
+
+    h2 {
+        font-size: 24px;
+    }
+}
+
+h2 {
+    text-align: center;
+    color: #1e3a8a; /* Dark blue */
+    margin-top: 40px;
+    margin-bottom: 20px;
+}
+
+.experience-list {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.experience-item {
+    background-color: #ffffff;
+    padding: 15px 20px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    transition: transform 0.2s;
+}
+
+.experience-item:hover {
+    transform: translateY(-3px);
+}
+
+.experience-item h3 {
+    margin: 0 0 5px 0;
+    color: #1e3a8a;
+    align-items: center;
+}
+
+.experience-item p {
+    margin: 0;
+    color: #555;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+    .experience-list {
+        gap: 10px;
+    }
+
+    .experience-item {
+        padding: 12px 15px;
+    }
+}
+
+.cv-btn {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 12px 25px;
+    background-color: #1e3a8a; /* dark blue */
+    color: #ffffff;
+    text-decoration: none;
+    border-radius: 10px;
+    font-weight: 600;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.cv-btn:hover {
+    background-color: #3b82f6;
+    transform: translateY(-2px);
+}
