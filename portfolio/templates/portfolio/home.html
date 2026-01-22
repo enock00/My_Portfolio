@@ -22,9 +22,9 @@
                 <a href="{{ profile.linkedin }}" target="_blank">LinkedIn</a>
             {% endif %}
                     {% if profile.cv %}
-            <a href="{{ profile.cv.url }}" class="btn cv-btn" download>
-                 Download CV
-             </a>
+             <a href="{% static 'images/cv.pdf' %}" class="btn cv-btn" download>
+                Download CV
+            </a>
         {% endif %}
         </div>
     </div>
@@ -53,7 +53,7 @@
         {% for project in projects %}
             <div class="project">
                 {% if project.image %}
-                    <img src="{{ project.image.url }}" alt="{{ project.title }}">
+                    <img src="{% static 'images/project.png' %}" alt="{{ project.title }}">
                 {% endif %}
 
                 <h3>{{ project.title }}</h3>
